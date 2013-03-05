@@ -52,14 +52,14 @@ group :test do
     gem "rspec-rails", "=1.3.3"
   end
   if RUBY_VERSION >= "1.9"
-    gem "simplecov", "~>0.6"
+    gem "simplecov"
   else
     gem "rcov",  "=0.9.11"
   end
   gem "ruby-prof", :platforms => [:ruby]
   gem "spork"
   gem "test-unit", "=1.2.3" if RUBY_VERSION >= "1.9" and ENV['IN_RBL_TESTENV'] == 'true'
-  gem "timecop", '~> 0.3.5'
+  gem "timecop"
 end
 
 # moved out of the dev group so backlogs can be tested by the user after install. Too many issues of weird setups with apache, nginx, etc.
